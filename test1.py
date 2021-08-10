@@ -3,7 +3,7 @@ import re
 from collections import defaultdict
 from TwitterAPI import TwitterAPI
 import json
-from codes import consumer_key, consumer_secret, access_token_key, access_token_secret
+from codes import consumer_key, consumer_secret, access_token_key, access_token_secret, apikey, url
 api = TwitterAPI(consumer_key, consumer_secret, access_token_key, access_token_secret)
 
 mentions = re.compile('@\S+')
@@ -28,9 +28,6 @@ for index, item in enumerate(r):
     if len(text) > 0:
         print(text)
         texts.append(text)
-
-apikey = 'Ufh0HLmiJsrRftdDNLxKX-Y4wsk1529Kqy5Rz4I5wma1'
-url = 'https://api.us-south.tone-analyzer.watson.cloud.ibm.com/instances/fe6c2f19-6c9b-4406-a09b-abb62fd53f65'
 
 from ibm_watson import ToneAnalyzerV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
@@ -57,7 +54,3 @@ for key in feelings:
 
 for key in feelings:
     print(f"{key} was {int(feelings[key] * 100)}% of people's recent reactions to {name}." )
-
-
-
-    
