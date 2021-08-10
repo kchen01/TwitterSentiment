@@ -3,7 +3,6 @@ url = 'https://api.us-south.tone-analyzer.watson.cloud.ibm.com/instances/fe6c2f1
 
 from ibm_watson import ToneAnalyzerV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
-import json
 
 authenticator = IAMAuthenticator(apikey)
 ta = ToneAnalyzerV3(version='2017-09-21', authenticator=authenticator)
@@ -13,5 +12,3 @@ res = ta.tone('I cried watching YOU. I feel so lucky to have gotten to watch you
 
 for tone in res["document_tone"]["tones"]:
     print(f'{tone["tone_name"]} with a score of {tone["score"]}')
-
-#print(json.dumps(res, indent = 4))
