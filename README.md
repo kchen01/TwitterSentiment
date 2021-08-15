@@ -1,9 +1,9 @@
 ## TwitterSentiment
 
 
-Given a username, returns current public sentiment on the person by analyzing the tone of recent tweets directed to that account.
+Given a username of a public Twitter user, this program returns current sentiment on the person by analyzing the tone of relevant tweets.
 
-For example, running the following request
+For example, running the following
 
       "python3 main.py KeanuReevesoff1"
       
