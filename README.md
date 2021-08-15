@@ -1,4 +1,4 @@
-# TwitterSentiment
+## TwitterSentiment
 
 
 Given a username, returns current public sentiment on the person by analyzing the tone of recent tweets directed to that account.
@@ -26,3 +26,6 @@ yields results like this:
 
 
 To run, one must create a Twitter Developer account to use the Twitter API, an IBM Cloud account to use the Watson Tone Analyzer, use pip to install "ibm_watson" and "requests", and fill out the corresponding codes in "codes.py".
+
+
+#### Created by Etienne Richart (github.com/etiennerichart) and Kevin Chen (github.com/kchen01).
